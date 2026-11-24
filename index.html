@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INSIA Lab | Intelligent Next-gen Signal & Image Analysis</title>
+  <meta name="description" content="The INSIA Lab at MIST, Bangladesh, studies how to extract reliable information from complex, time-varying signals, combining signal processing with modern machine learning.">
+  <meta property="og:title" content="INSIA Lab | Intelligent Next-gen Signal & Image Analysis">
+  <meta property="og:description" content="Signal processing and machine learning for sensing, biomedical signals and human–machine interaction.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.insia-lab.com/">
+  <meta property="og:image" content="https://www.insia-lab.com/assets/img/news/2d-svmd.webp">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=42">
+</head>
+<body data-page="index">
+<main>
+  <!-- Hero v11: multichannel wave surface on pure black (tools/make_hero_v11.py), merges with the black header -->
+  <section class="hero-img hero-v11" role="img" aria-label="A smooth 3D surface of flowing signal waves with sampling stems, white to blue on black">
+    <div class="container">
+      <span class="label reveal">Dhaka, Bangladesh</span>
+      <h1 class="reveal hero-title" style="--i:1">Intelligent Next&#8209;gen<br><em>Signal &amp; Image</em> Analysis Lab</h1>
+      <p class="lede reveal" style="--i:2">Extracting reliable information from complex, time-varying signals.</p>
+      <div class="hero-actions reveal" style="--i:3">
+        <a class="btn btn-dark" href="#about">Explore the lab ↓</a>
+        <a class="btn" href="publications.html">Publications</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container hero-grid">
+      <div>
+        <div class="sec-head reveal"><span class="num">00</span><h2>About <em>the lab</em></h2></div>
+        <p class="lede reveal" style="--i:1">The <b>Intelligent Next-gen Signal &amp; Image Analysis (INSIA) Lab</b> at the Military Institute of Science and Technology studies how to extract reliable information from complex, time-varying signals.</p>
+        <p class="lede reveal" style="--i:2">We pair the mathematics of signal processing with modern machine learning to build sensing systems that are accurate, interpretable and efficient enough to deploy.</p>
+        <div class="hero-actions reveal" style="--i:3">
+          <a class="btn btn-dark" href="team.html">Meet the team →</a>
+          <a class="btn" href="director.html">The director</a>
+        </div>
+      </div>
+      <!-- "On the bench": content comes from INSIA.bench in assets/js/data.js -->
+      <aside class="bench reveal" style="--i:2" id="bench" aria-label="What the lab is working on now"></aside>
+    </div>
+
+    <!-- Mission & vision (design.md §6n) -->
+    <div class="container mv" id="mission">
+      <div class="mv-why reveal">
+        <span class="label">Why we exist</span>
+        <p>Bangladesh has no shortage of talented students, but few places where they can do serious research. Facilities are limited, experienced researchers are few and stretched thin, and a day-to-day research-lab culture has yet to take root. INSIA was started to change that.</p>
+      </div>
+      <div class="mv-statements">
+        <div class="mv-card reveal" style="--i:1">
+          <span class="label">Our vision</span>
+          <p>A Bangladesh where world-class research is done at home, and where scientists trained here help shape their fields worldwide.</p>
+        </div>
+        <div class="mv-card reveal" style="--i:2">
+          <span class="label">Our mission</span>
+          <p>To build the research culture Bangladesh is missing: a friendly lab where students work side by side with experienced researchers, grow from the fundamentals to the frontier, and publish work that matters in the real world.</p>
+        </div>
+      </div>
+      <ol class="mv-pillars">
+        <li class="reveal"><span class="mv-n">01</span><h3>Mentorship up close</h3><p>Experienced researchers sit down with every student, one to one. Questions are welcome, doors stay open, and nobody is left to figure research out alone.</p></li>
+        <li class="reveal" style="--i:1"><span class="mv-n">02</span><h3>From basics to frontier</h3><p>Every member starts with the fundamentals (signals, mathematics, programming, reading papers) and moves step by step to advanced, original research.</p></li>
+        <li class="reveal" style="--i:2"><span class="mv-n">03</span><h3>Work that matters</h3><p>We cover the full chain: foundational theory, translational methods that carry theory into practice, and applied systems that work outside the lab.</p></li>
+        <li class="reveal" style="--i:3"><span class="mv-n">04</span><h3>Scientists for Bangladesh and the world</h3><p>We train research scientists who can compete anywhere, and who bring that impact back home.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="facts reveal">
+        <div class="fact"><b>35</b><span>Peer-reviewed papers</span></div>
+        <div class="fact"><b>10</b><span>Q1 journal articles</span></div>
+        <div class="fact"><b>19.2</b><span>Highest impact factor</span></div>
+        <div class="fact"><b>23</b><span>Members &amp; alumni</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <div class="container">
+      <div class="sec-head reveal"><span class="num">01</span><h2>Research <em>directions</em></h2></div>
+      <div class="areas" id="areas"></div>
+    </div>
+  </section>
+
+  <section class="section" id="recent">
+    <div class="container">
+      <div class="sec-head reveal"><span class="num">02</span><h2>Recent <em>work</em></h2></div>
+      <div class="slider-bar">
+        <div class="slider-nav">
+          <span class="label" id="recent-count" aria-live="polite"></span>
+          <button class="slide-btn" id="recent-prev" aria-label="Previous">←</button>
+          <button class="slide-btn" id="recent-next" aria-label="Next">→</button>
+        </div>
+      </div>
+      <div class="slider" id="recent-track" tabindex="0" aria-label="Recent work, scroll sideways"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="join-box reveal">
+        <div>
+          <span class="label" style="display:block;margin-bottom:14px;color:var(--accent)">03 · Join us</span>
+          <h2>Curious about <em>signals?</em></h2>
+          <p>We welcome motivated students at all levels and researchers interested in collaboration. Email us with the subject line <code>INSIA Lab – Prospective Member</code>, attaching your CV and a short statement of your research interests.</p>
+        </div>
+        <a class="btn btn-dark" href="mailto:newajfaisal@gmail.com?subject=INSIA%20Lab%20%E2%80%93%20Prospective%20Member">Write to us →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/data.js?v=42"></script>
+<script src="assets/js/main.js?v=42"></script>
+<script src="assets/js/hero-wave.js?v=42"></script>
+<script>
+  // Thin line-art icons for each research direction
+  const ico = {
+    tf: '<svg viewBox="0 0 120 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 17c4 0 5-12 9-12s5 24 9 24 4-20 8-20 4 16 8 16 3-12 7-12 3 8 6 8 3-6 6-6 3 4 6 4 2-3 5-3 3 2 5 2 2-1 5-1 3 1 5 1 3 0 5 0 3 0 5 0"/></svg>',
+    radar: '<svg viewBox="0 0 120 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 30a26 26 0 0 1 52 0"/><path d="M14 30a16 16 0 0 1 32 0"/><circle cx="30" cy="30" r="2.5"/><path d="M30 30 48 10"/><path d="M66 17h10l4-9 6 18 5-12 3 3h22" opacity=".9"/></svg>',
+    ecg: '<svg viewBox="0 0 120 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h26l4-6 4 6h6l4-17 5 28 4-11h12l4-5 4 5h53"/></svg>',
+    hmi: '<svg viewBox="0 0 120 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="14" cy="11" r="6"/><path d="M4 31c1-7 5-10 10-10s9 3 10 10"/><path d="M32 17h48" stroke-dasharray="2 5"/><rect x="88" y="6" width="26" height="18" rx="3"/><path d="M95 30h12M101 24v6"/></svg>',
+    grid: '<svg viewBox="0 0 120 34" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="30" height="30" rx="2"/><path d="M2 12h30M2 22h30M12 2v30M22 2v30"/><path d="M40 17h14M50 13l4 4-4 4" stroke-linecap="round"/><rect x="62" y="6" width="22" height="22" rx="2"/><rect x="90" y="10" width="14" height="14" rx="2"/><rect x="108" y="13" width="9" height="9" rx="1.5"/></svg>',
+  };
+  const tags = ["Theory", "Sensing", "Biomedical", "Interaction", "Vision"];
+  // v9: each direction uses one of the lab's own figures as a blended background
+  const bg = { tf: "ecg-tfr", radar: "radar-sleep", ecg: "cad-ecg", hmi: "bci", grid: "2d-svmd" };
+  document.getElementById("areas").innerHTML = INSIA.directions.map((d, i) => `
+    <a class="area has-bg reveal" style="--i:${i % 3}" href="research.html#${d.glyph}">
+      <div class="area-bg" style="background-image:url('assets/img/news/${bg[d.glyph]}.webp')" aria-hidden="true"></div>
+      <div class="ico">${ico[d.glyph]}</div>
+      <span class="label">0${i + 1} · ${tags[i]}</span>
+      <h3>${d.title.replace(/ & | and /, m => ` <em>${m.trim()}</em> `)}</h3><p>${d.text}</p>
+    </a>`).join("") + `
+    <a class="area join reveal" style="--i:2" href="research.html">
+      <span class="label">Explore</span>
+      <div><h3>Our <em>research</em></h3><p>Projects, figures and papers for every direction, plus all 35 publications. →</p></div>
+    </a>`;
+  INSIA_RENDER.bench(document.getElementById("bench"));
+  INSIA_RENDER.recent(document.getElementById("recent-track"), {
+    prev: document.getElementById("recent-prev"),
+    next: document.getElementById("recent-next"),
+    counter: document.getElementById("recent-count"),
+  });
+  INSIA_OBSERVE();
+</script>
+</body>
+</html>

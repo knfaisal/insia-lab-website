@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research | INSIA Lab</title>
+  <meta name="description" content="Research directions and featured projects of the INSIA Lab: time–frequency analysis, intelligent sensing, biomedical and neural signals, human–machine interaction and image analysis.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css?v=42">
+</head>
+<body data-page="research">
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="label"><a href="index.html">Home</a> / Research</span>
+      <h1 class="reveal">Our <em>research</em></h1>
+      <p class="lede reveal" style="--i:1">The INSIA Lab studies how to extract reliable information from complex, time-varying signals. We combine the mathematics of signal processing (time–frequency analysis and adaptive decomposition) with modern machine learning, and apply it wherever signals are noisy, non-stationary and important: radar, wearables, the heart, the brain and the human hand.</p>
+      <nav class="dir-jump reveal" style="--i:2" aria-label="Jump to a research direction" id="dir-jump"></nav>
+    </div>
+  </section>
+
+  <section class="section after-head">
+    <div class="container" id="dirs"></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-head reveal"><span class="num">06</span><h2>Featured <em>projects</em></h2></div>
+      <div class="projects" id="projects"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-head reveal"><span class="num">07</span><h2>Funding</h2></div>
+      <div id="funding"></div>
+      <div class="join-box reveal" style="margin-top:var(--s5)">
+        <div>
+          <span class="label" style="display:block;margin-bottom:14px">Collaborate</span>
+          <h2>Working on <em>signals?</em></h2>
+          <p>We're open to collaborations, student projects and shared datasets. Email us with a short description of your idea.</p>
+        </div>
+        <a class="btn btn-dark" href="mailto:newajfaisal@gmail.com?subject=INSIA%20Lab%20%E2%80%93%20Collaboration">Get in touch →</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/data.js?v=42"></script>
+<script src="assets/js/main.js?v=42"></script>
+<script>
+  document.getElementById("dir-jump").innerHTML = INSIA.directions.map((d, i) =>
+    `<a href="#${d.glyph}"><span>${String(i + 1).padStart(2, "0")}</span>${d.title}</a>`).join("");
+  INSIA_RENDER.research(document.getElementById("dirs"), document.getElementById("projects"), document.getElementById("funding"));
+</script>
+</body>
+</html>

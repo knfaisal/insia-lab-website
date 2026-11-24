@@ -1,0 +1,9 @@
+# reference images from the owner (third-party, never publish)
+Theme/
+# working screenshots (large, not part of the site)
+screenshots/
+# local tooling
+.claude/
+tools/__pycache__/
+# custom domain file: added after DNS points to GitHub (design.md §9)
+CNAME
