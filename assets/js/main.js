@@ -3,6 +3,11 @@
    header/footer, theme, mobile menu, gentle reveal,
    and renderers for news / publications / team (data.js).
    ========================================================= */
+// Send plain-http visitors to the secure address (until GitHub's HTTPS-only switch can be turned on, design.md §9)
+if (location.protocol === "http:" && /(^|\.)insia-lab\.com$/.test(location.hostname)) {
+  location.replace("https://www.insia-lab.com" + location.pathname + location.search + location.hash);
+}
+
 (() => {
   const D = window.INSIA;
   const $ = (s, r = document) => r.querySelector(s);

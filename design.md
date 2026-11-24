@@ -210,6 +210,7 @@ CNAME                                 www.insia-lab.com
 | 73 | | **Owner: mission & vision in About; keep 3 themes with visitor buttons.** Wrote and placed the draft (§6n), CSS v15, outlined header dot pill, labelled footer picker. Verified light/dark, mobile, sync. `v=42`. |
 | 74 | | **Owner: launch on GitHub.** Created public repo `knfaisal/insia-lab-website`, pushed, enabled Pages; preview live and checked (all pages 200, hero animation, no broken images or console errors). DNS on Namecheap still points to Google Sites; switch steps in §9. |
 | 75 | | **Owner: domain switched; remove `.html` from addresses.** www CNAME → GitHub, Google Sites released, certificate issued, HTTPS enforced. Clean URLs across pages/JS/redirects, removed clashing `contact/` + `news/` stubs, fixed garbled arrow on the 404 page, added `tools/serve.py` for local preview. Verified all pages and links. `v=43`. |
+| 76 | | **Owner: still "Not secure".** Bare domain moved to A records; GitHub certificate for both names requested but stuck at `new` (DNS verified correct; domain reset once). Added a script redirect from http to https://www so no visitor lands on the insecure page meanwhile. `v=44`. |
 
 ---
 
@@ -454,6 +455,7 @@ Verified: dark/blue and light/gold desktop renders, 375 px (no overflow), picker
   3. Keep any TXT records (Google verification, email).
 - **After DNS:** commit `CNAME` (`www.insia-lab.com`), set the custom domain in Pages, wait for the certificate, turn on *Enforce HTTPS*, then remove the custom URL from Google Sites.
 - **Live (2026-11-24):** www.insia-lab.com serves the GitHub site; Let's Encrypt certificate issued (valid to Feb 2027) and *Enforce HTTPS* on. The bare domain uses a Namecheap URL Forward to `https://www.insia-lab.com` (fine for `http://insia-lab.com`; replace it with the four A records if `https://insia-lab.com` ever needs to work). Keep the TXT records (Google Search Console verification, Namecheap email-forwarding SPF).
+- **Bare domain https (2026-11-24, update):** the Namecheap URL Forward was replaced by the four A records, and GitHub was asked for a certificate covering `www.insia-lab.com` + `insia-lab.com`. DNS, CAA and GitHub's health check are all fine, but the request sat at state `new` for 5+ hours, even after the custom domain was cleared and set again. While it is pending GitHub refuses *Enforce HTTPS*, so `main.js` now sends any `http://` visitor on insia-lab.com to `https://www.insia-lab.com` itself (`v=44`). Once the certificate is issued: `gh api -X PUT repos/knfaisal/insia-lab-website/pages -F https_enforced=true`. If it is still `new` after 24 h, contact GitHub Support (Pages certificate stuck).
 - **Clean addresses:** all links use `/research`, `/team` … (GitHub Pages serves `research.html` for `/research`; the old `.html` addresses still work). The redundant `contact/` and `news/` redirect folders were removed because they clashed with `/contact` and `/news`. Local preview: `python tools/serve.py` (mimics Pages: clean URLs + 404 page).
 - **Updating the site:** edit files, `git commit`, `git push`; Pages rebuilds in about a minute.
 
