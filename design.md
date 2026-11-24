@@ -209,6 +209,7 @@ CNAME                                 www.insia-lab.com
 | 72 | | **Owner: animate the wave, stems up/down like sample amplitudes.** Added `hero-wave.js` (live canvas travelling wave + signed stem plot, theme colours and extras), CSS v14, image fallback, reduced-motion still frame, off-screen pause. Verified desktop (3 themes), 375 px, reduced motion (§6m). `v=40`. |
 | 73 | | **Owner: mission & vision in About; keep 3 themes with visitor buttons.** Wrote and placed the draft (§6n), CSS v15, outlined header dot pill, labelled footer picker. Verified light/dark, mobile, sync. `v=42`. |
 | 74 | | **Owner: launch on GitHub.** Created public repo `knfaisal/insia-lab-website`, pushed, enabled Pages; preview live and checked (all pages 200, hero animation, no broken images or console errors). DNS on Namecheap still points to Google Sites; switch steps in §9. |
+| 75 | | **Owner: domain switched; remove `.html` from addresses.** www CNAME → GitHub, Google Sites released, certificate issued, HTTPS enforced. Clean URLs across pages/JS/redirects, removed clashing `contact/` + `news/` stubs, fixed garbled arrow on the 404 page, added `tools/serve.py` for local preview. Verified all pages and links. `v=43`. |
 
 ---
 
@@ -452,6 +453,8 @@ Verified: dark/blue and light/gold desktop renders, 375 px (no overflow), picker
   2. `@`: delete the URL Redirect record and add four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
   3. Keep any TXT records (Google verification, email).
 - **After DNS:** commit `CNAME` (`www.insia-lab.com`), set the custom domain in Pages, wait for the certificate, turn on *Enforce HTTPS*, then remove the custom URL from Google Sites.
+- **Live (2026-11-24):** www.insia-lab.com serves the GitHub site; Let's Encrypt certificate issued (valid to Feb 2027) and *Enforce HTTPS* on. The bare domain uses a Namecheap URL Forward to `https://www.insia-lab.com` (fine for `http://insia-lab.com`; replace it with the four A records if `https://insia-lab.com` ever needs to work). Keep the TXT records (Google Search Console verification, Namecheap email-forwarding SPF).
+- **Clean addresses:** all links use `/research`, `/team` … (GitHub Pages serves `research.html` for `/research`; the old `.html` addresses still work). The redundant `contact/` and `news/` redirect folders were removed because they clashed with `/contact` and `/news`. Local preview: `python tools/serve.py` (mimics Pages: clean URLs + 404 page).
 - **Updating the site:** edit files, `git commit`, `git push`; Pages rebuilds in about a minute.
 
 ## 8. How to update content later

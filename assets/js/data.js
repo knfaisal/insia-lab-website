@@ -202,7 +202,7 @@ window.INSIA = {
     mentors: [
       { name: "Dr. Kazi Newaj Faisal", role: "Founding Director & Principal Investigator",
         lines: ["Associate Professor, EECE Dept.", "Military Institute of Science and Technology (MIST), Bangladesh"],
-        email: "newajfaisal@gmail.com", profile: "director.html",
+        email: "newajfaisal@gmail.com", profile: "director",
         photo: "assets/img/team/kazi-newaj-faisal.webp",
         links: ["https://scholar.google.com/citations?user=WYuCPWcAAAAJ&hl=en", "https://www.linkedin.com/in/newajfaisal/", "https://www.researchgate.net/profile/Kazi-Newaj-Faisal", "https://orcid.org/0000-0003-0546-4536"] },
       { name: "Dr. Rishi Raj Sharma", role: "Co-Principal Investigator",
@@ -257,7 +257,7 @@ window.INSIA = {
         { name: "Anindya Tirtha", photo: "assets/img/team/anindya-tirtha.webp",
           links: ["https://www.linkedin.com/in/anindya-chanda-tirtha-705a87417", "https://www.facebook.com/apc.tirtha"] },
         { name: "Md. Raisul Islam", photo: "assets/img/team/raisul-islam-romel.webp",
-          links: ["https://www.linkedin.com/in/raisul-romel517/", "https://www.facebook.com/raisulislamromel", "https://www.researchgate.net/profile/Md-Raisul-Islam-9", "https://scholar.google.com/citations?user=VLt0c44AAAAJ&hl", "https://raisul-portfolio.vercel.app/index.html"] },
+          links: ["https://www.linkedin.com/in/raisul-romel517/", "https://www.facebook.com/raisulislamromel", "https://www.researchgate.net/profile/Md-Raisul-Islam-9", "https://scholar.google.com/citations?user=VLt0c44AAAAJ&hl", "https://raisul-portfolio.vercel.app/./"] },
         { name: "Saquib Farhan", photo: "assets/img/team/saquib-farhan.webp",
           links: ["https://www.linkedin.com/in/farhan-saquib-8b4350301/", "https://scholar.google.com/citations?user=qL_1N9IAAAAJ&hl=en", "https://orcid.org/0009-0002-2821-4337"] },
         { name: "Nasiruddin Himel", photo: "assets/img/team/nasiruddin-himel.webp",

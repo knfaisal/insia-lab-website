@@ -39,15 +39,15 @@
     <rect x="41" y="386" width="305" height="563" fill="currentColor"/></svg>`;
 
   /* ---------- Header / footer ---------- */
-  const NAV = [["index.html", "Home"], ["research.html", "Research"], ["director.html", "Director"], ["team.html", "Team"], ["publications.html", "Publications"], ["contact.html", "Contact"]];
+  const NAV = [["./", "Home"], ["research", "Research"], ["director", "Director"], ["team", "Team"], ["publications", "Publications"], ["contact", "Contact"]];
   const page = document.body.dataset.page;
   const header = document.createElement("header");
   header.className = "site-header";
   const WORD = `<span class="word">INSIA Lab<small>Intelligent Next-gen Signal &amp; Image Analysis</small></span>`;
   header.innerHTML = `<div class="container">
-      <a class="brand" href="index.html" aria-label="INSIA Lab home">${LOGO}${WORD}</a>
+      <a class="brand" href="./" aria-label="INSIA Lab home">${LOGO}${WORD}</a>
       <div class="right">
-        <nav class="nav" id="nav" aria-label="Main">${NAV.map(([h, t]) => { const on = h.replace(".html", "") === page; return `<a href="${h}"${on ? ' class="active" aria-current="page"' : ""}>${t}</a>`; }).join("")}</nav>
+        <nav class="nav" id="nav" aria-label="Main">${NAV.map(([h, t]) => { const on = (h === "./" ? "index" : h) === page; return `<a href="${h}"${on ? ' class="active" aria-current="page"' : ""}>${t}</a>`; }).join("")}</nav>
         <div class="header-tools">
           <div class="accent-switch" role="group" aria-label="Colour theme">
             <button data-a="blue" aria-label="Blue theme" title="Blue"></button>
@@ -65,7 +65,7 @@
   footer.className = "site-footer";
   footer.innerHTML = `<div class="container">
     <div class="footer-grid">
-      <div><a class="brand" href="index.html">${LOGO}${WORD}</a>
+      <div><a class="brand" href="./">${LOGO}${WORD}</a>
         <p style="max-width:36ch">Intelligent Next-gen Signal &amp; Image Analysis Lab, Department of EECE, Military Institute of Science and Technology.</p></div>
       <div><span class="label">Pages</span>${NAV.map(([h, t]) => `<a href="${h}">${t}</a>`).join("")}</div>
       <div><span class="label">Elsewhere</span><a href="${D.lab.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="${D.lab.facebook}" target="_blank" rel="noopener">Facebook</a><a href="https://scholar.google.com/citations?user=WYuCPWcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></div>
@@ -174,7 +174,7 @@
             <h2>${esc(d.title).replace(/ &amp; /, " <em>&amp;</em> ")}</h2>
             <p class="lede">${esc(d.text)}</p>
             ${works.length ? `<div class="dir-works"><span class="label">Projects</span>${works.map(mini).join("")}</div>` : ""}
-            <a class="btn" href="publications.html?q=${encodeURIComponent(d.query || "")}">See related papers →</a>
+            <a class="btn" href="publications?q=${encodeURIComponent(d.query || "")}">See related papers →</a>
           </div></section>`;
       }).join("");
       projectsEl.innerHTML = D.news.map((n, i) => `<article class="proj reveal" id="p-${slug(n.title)}" style="--i:${i % 2}">
@@ -215,7 +215,7 @@
       }
       if (searchEl) {
         searchEl.oninput = () => { q = searchEl.value.trim(); draw(); };
-        const pre = new URLSearchParams(location.search).get("q");   // v9: publications.html?q=radar
+        const pre = new URLSearchParams(location.search).get("q");   // v9: publications?q=radar
         if (pre) { searchEl.value = pre; q = pre; }
       }
       function draw() {

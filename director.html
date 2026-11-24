@@ -7,13 +7,13 @@
   <meta name="description" content="Dr. Kazi Newaj Faisal, Associate Professor at MIST and founding director of the INSIA Lab: appointments, education, research and teaching.">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css?v=42">
+  <link rel="stylesheet" href="assets/css/style.css?v=43">
 </head>
 <body data-page="director">
 <main>
   <section class="page-head">
     <div class="container single">
-      <span class="label"><a href="index.html">Home</a> / Director &amp; Principal Investigator</span>
+      <span class="label"><a href="./">Home</a> / Director &amp; Principal Investigator</span>
       <img class="portrait reveal" src="assets/img/portrait.webp" alt="Portrait of Dr. Kazi Newaj Faisal">
       <h1 class="reveal">Kazi Newaj <em>Faisal</em>, PhD</h1>
       <p class="lede reveal" style="--i:1">Associate Professor of Electrical, Electronic and Communication Engineering at the <a href="https://mist.ac.bd/" target="_blank" rel="noopener">Military Institute of Science and Technology</a>, and founding director of the INSIA Lab. His research is on time–frequency analysis and non-stationary signal processing for radar, biomedical and seismic signals.</p>
@@ -161,8 +161,8 @@
     </div>
   </section>
 </main>
-<script src="assets/js/data.js?v=42"></script>
-<script src="assets/js/main.js?v=42"></script>
+<script src="assets/js/data.js?v=43"></script>
+<script src="assets/js/main.js?v=43"></script>
 <script>
   const I = INSIA_ICONS;
   const L = [
@@ -173,7 +173,7 @@
     ["https://mistedu-my.sharepoint.com/:b:/g/personal/newaj_eece_mist_ac_bd/IQB-BMEMxvQgRZ--KuXJqAWAATdhxiK4l7Rq_c8S_gf0dIo?e=b6enah", "doc", "CV (PDF)"],
   ];
   document.getElementById("pi-links").innerHTML = L.map(([u, k, l]) => `<a href="${u}" target="_blank" rel="noopener">${I[k]}${l}</a>`).join("")
-    + `<a href="contact.html">${I.mail}Contact</a>`;
+    + `<a href="contact">${I.mail}Contact</a>`;
 
   // v9: one long page; #research / #teaching links still jump to their sections
   INSIA_RENDER.pubs(document.getElementById("pubs"), { filterEl: document.getElementById("filters") });

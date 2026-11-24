@@ -12,7 +12,7 @@
   <meta property="og:image" content="https://www.insia-lab.com/assets/img/news/2d-svmd.webp">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css?v=42">
+  <link rel="stylesheet" href="assets/css/style.css?v=43">
 </head>
 <body data-page="index">
 <main>
@@ -24,7 +24,7 @@
       <p class="lede reveal" style="--i:2">Extracting reliable information from complex, time-varying signals.</p>
       <div class="hero-actions reveal" style="--i:3">
         <a class="btn btn-dark" href="#about">Explore the lab ↓</a>
-        <a class="btn" href="publications.html">Publications</a>
+        <a class="btn" href="publications">Publications</a>
       </div>
     </div>
   </section>
@@ -36,8 +36,8 @@
         <p class="lede reveal" style="--i:1">The <b>Intelligent Next-gen Signal &amp; Image Analysis (INSIA) Lab</b> at the Military Institute of Science and Technology studies how to extract reliable information from complex, time-varying signals.</p>
         <p class="lede reveal" style="--i:2">We pair the mathematics of signal processing with modern machine learning to build sensing systems that are accurate, interpretable and efficient enough to deploy.</p>
         <div class="hero-actions reveal" style="--i:3">
-          <a class="btn btn-dark" href="team.html">Meet the team →</a>
-          <a class="btn" href="director.html">The director</a>
+          <a class="btn btn-dark" href="team">Meet the team →</a>
+          <a class="btn" href="director">The director</a>
         </div>
       </div>
       <!-- "On the bench": content comes from INSIA.bench in assets/js/data.js -->
@@ -115,9 +115,9 @@
   </section>
 </main>
 
-<script src="assets/js/data.js?v=42"></script>
-<script src="assets/js/main.js?v=42"></script>
-<script src="assets/js/hero-wave.js?v=42"></script>
+<script src="assets/js/data.js?v=43"></script>
+<script src="assets/js/main.js?v=43"></script>
+<script src="assets/js/hero-wave.js?v=43"></script>
 <script>
   // Thin line-art icons for each research direction
   const ico = {
@@ -131,13 +131,13 @@
   // v9: each direction uses one of the lab's own figures as a blended background
   const bg = { tf: "ecg-tfr", radar: "radar-sleep", ecg: "cad-ecg", hmi: "bci", grid: "2d-svmd" };
   document.getElementById("areas").innerHTML = INSIA.directions.map((d, i) => `
-    <a class="area has-bg reveal" style="--i:${i % 3}" href="research.html#${d.glyph}">
+    <a class="area has-bg reveal" style="--i:${i % 3}" href="research#${d.glyph}">
       <div class="area-bg" style="background-image:url('assets/img/news/${bg[d.glyph]}.webp')" aria-hidden="true"></div>
       <div class="ico">${ico[d.glyph]}</div>
       <span class="label">0${i + 1} · ${tags[i]}</span>
       <h3>${d.title.replace(/ & | and /, m => ` <em>${m.trim()}</em> `)}</h3><p>${d.text}</p>
     </a>`).join("") + `
-    <a class="area join reveal" style="--i:2" href="research.html">
+    <a class="area join reveal" style="--i:2" href="research">
       <span class="label">Explore</span>
       <div><h3>Our <em>research</em></h3><p>Projects, figures and papers for every direction, plus all 35 publications. →</p></div>
     </a>`;
