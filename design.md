@@ -208,6 +208,7 @@ CNAME                                 www.insia-lab.com
 | 71 | | **Owner: try blue, red and partially-golden themes from the new Theme images.** Reviewed N1–N7 and mapped them to themes (§6l). Generated 6 hero renders; after the first pass, tuned red (hotter glow), gold (gold-not-cream bokeh) and blue (fewer, varied stars). Added the v13 accent-token system, replaced every hard-coded blue, made the logo square follow the theme, and added the header switcher + `?accent=` preview. Verified: all 3 themes in light and dark (comparison board), switcher fits at 375px, no console errors. Asset version is `v=38`. |
 | 72 | | **Owner: animate the wave, stems up/down like sample amplitudes.** Added `hero-wave.js` (live canvas travelling wave + signed stem plot, theme colours and extras), CSS v14, image fallback, reduced-motion still frame, off-screen pause. Verified desktop (3 themes), 375 px, reduced motion (§6m). `v=40`. |
 | 73 | | **Owner: mission & vision in About; keep 3 themes with visitor buttons.** Wrote and placed the draft (§6n), CSS v15, outlined header dot pill, labelled footer picker. Verified light/dark, mobile, sync. `v=42`. |
+| 74 | | **Owner: launch on GitHub.** Created public repo `knfaisal/insia-lab-website`, pushed, enabled Pages; preview live and checked (all pages 200, hero animation, no broken images or console errors). DNS on Namecheap still points to Google Sites; switch steps in §9. |
 
 ---
 
@@ -440,6 +441,18 @@ Verified: dark/blue and light/gold desktop renders, 375 px (no overflow), picker
 - [ ] Update DNS at the registrar (§5) and remove the Google Sites mapping
 - [ ] Enforce HTTPS
 - [ ] Check every page on a phone
+
+## 9. Deployment (2026-11-24)
+
+- **Repo:** https://github.com/knfaisal/insia-lab-website (public, branch `main`, GitHub Pages from `/`).
+- **Preview (live now):** https://knfaisal.github.io/insia-lab-website/ (the old-URL redirect pages and the 404 page use root paths, so they only work once the custom domain is active).
+- **Not published:** `Theme/` (third-party reference images), `screenshots/`, `.claude/`. `CNAME` is held back until DNS points to GitHub, otherwise the preview would redirect to the old Google Site.
+- **DNS (Namecheap → Domain List → insia-lab.com → Advanced DNS):**
+  1. `www` CNAME: change `ghs.googlehosted.com` → `knfaisal.github.io`
+  2. `@`: delete the URL Redirect record and add four A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+  3. Keep any TXT records (Google verification, email).
+- **After DNS:** commit `CNAME` (`www.insia-lab.com`), set the custom domain in Pages, wait for the certificate, turn on *Enforce HTTPS*, then remove the custom URL from Google Sites.
+- **Updating the site:** edit files, `git commit`, `git push`; Pages rebuilds in about a minute.
 
 ## 8. How to update content later
 
