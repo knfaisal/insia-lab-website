@@ -211,6 +211,7 @@ CNAME                                 www.insia-lab.com
 | 74 | | **Owner: launch on GitHub.** Created public repo `knfaisal/insia-lab-website`, pushed, enabled Pages; preview live and checked (all pages 200, hero animation, no broken images or console errors). DNS on Namecheap still points to Google Sites; switch steps in §9. |
 | 75 | | **Owner: domain switched; remove `.html` from addresses.** www CNAME → GitHub, Google Sites released, certificate issued, HTTPS enforced. Clean URLs across pages/JS/redirects, removed clashing `contact/` + `news/` stubs, fixed garbled arrow on the 404 page, added `tools/serve.py` for local preview. Verified all pages and links. `v=43`. |
 | 76 | | **Owner: still "Not secure".** Bare domain moved to A records; GitHub certificate for both names requested but stuck at `new` (DNS verified correct; domain reset once). Added a script redirect from http to https://www so no visitor lands on the insecure page meanwhile. `v=44`. |
+| 77 | | **Owner: add new members serially, chronological, Level 2 and 3 distinguishable.** Added 8 Level 3 + 8 Level 2 members as two Team sections with level badges (§6o), CSS v16, initials fallback for missing photos. Verified in browser, no broken images. `v=45`. |
 
 ---
 
@@ -432,6 +433,15 @@ Tone choice: states the gap plainly but positively (no criticism of people or in
 **Theme choice for visitors:** the three header dots now sit in one outlined pill so they read as a control, and the footer has a labelled picker (Theme: Blue · Red · Golden). Both stay in sync and remember the choice. Default stays Blue.
 
 Verified: dark/blue and light/gold desktop renders, 375 px (no overflow), picker sync. Asset version is `v=42`.
+
+## 6o. Level 3 and Level 2 members (2026-11-28)
+
+- **Source:** `New Members/` (kept out of git): Level 2 photos + `Info.docx`/`Labib.docx` (links), Level 3 sign-up sheet `Level 3.xlsx` (links; photos only as Google Drive links).
+- **Groups:** two new Team sections after *Undergraduate Lab Members*, before *Alumni*: **Level 3 Members** (third-year) then **Level 2 Members** (second-year). Level = MIST academic year.
+- **Order:** chronological within each level. Level 3 by sign-up-sheet timestamp; Level 2 by the time each photo/file was submitted (Mayesha, Rafid, Puja, Labib, Shahriar on 16 Oct; Sahiba 17 Oct; Ayesha, Jarin 20 Nov).
+- **Telling them apart:** own section heading and intro line, plus a badge on every photo: Level 3 solid accent pill, Level 2 outlined pill (theme-aware, CSS v16).
+- **Photos:** Level 2 cropped to head and shoulders, 720×900 WebP (Puja's HEIC converted with Windows imaging, Labib's taken from his .docx). Level 3 cards show initials until photos are added: drop `assets/img/team/<slug>.webp` and add `photo:` to the person in `data.js`.
+- **Links cleaned:** tracking parameters removed, Scholar links reduced to `?user=ID`. Skipped: Rafiul's LinkedIn (none yet) and ResearchGate ("Machine", not a link); Sahiba has Scholar only.
 
 ## 7. Go-live checklist
 

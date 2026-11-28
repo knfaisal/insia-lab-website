@@ -258,8 +258,13 @@ if (location.protocol === "http:" && /(^|\.)insia-lab\.com$/.test(location.hostn
         const [a, ...rest] = g.title.split(" ");
         // v8 uniform member card (idea from MMLab@NTU): photo, NAME, blue role line, optional
         // "now @" line for alumni, and links in a separate footer strip so cards align
-        return sec(rest.length ? `${a} <em>${rest.join(" ")}</em>` : `<em>${a}</em>`, `<div class="people">${g.people.map((p, i) => `<article class="person reveal" style="--i:${i % 4}">
-            <div class="photo"><img src="${p.photo}" alt="${esc(p.name)}" loading="lazy"></div>
+        // v16: level groups (MIST academic year) get their own heading, an intro line and a badge on every card
+        const head = g.level ? `Level ${g.level} <em>Members</em>` : rest.length ? `${a} <em>${rest.join(" ")}</em>` : `<em>${a}</em>`;
+        const intro = g.intro ? `<p class="group-intro reveal">${esc(g.intro)} · in the order they joined</p>` : "";
+        const badge = g.level ? `<span class="lvl lvl-${g.level}">Level ${g.level}</span>` : "";
+        const initials = name => name.replace(/^(Md|Mohammad|Syeda?)\.?\s+/i, "").split(/\s+/).slice(0, 2).map(w => w[0]).join("");
+        return sec(head, `${intro}<div class="people${g.level ? ` people-lvl lvl-group-${g.level}` : ""}">${g.people.map((p, i) => `<article class="person reveal" style="--i:${i % 4}">
+            <div class="photo">${p.photo ? `<img src="${p.photo}" alt="${esc(p.name)}" loading="lazy">` : `<span class="initials" aria-hidden="true">${esc(initials(p.name))}</span>`}${badge}</div>
             <div class="person-body"><h3>${esc(p.name)}</h3><span class="person-role">${esc(p.role || "")}</span>
               ${p.now ? `<span class="person-now">→ ${esc(p.now)}</span>` : ""}
               ${p.note ? `<p>${esc(p.note)}</p>` : ""}</div>

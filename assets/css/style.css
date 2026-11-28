@@ -874,3 +874,21 @@ html[data-accent="gold"] .hero-img.hero-v11 { background-image: url("../img/hero
 .site-footer .accent-switch button[data-a="gold"]::before { background: linear-gradient(135deg, #F6D27A, #B8862B); }
 .site-footer .accent-switch button[aria-pressed="true"] { border-color: var(--blue); }
 .footer-bottom { flex-wrap: wrap; gap: var(--s2); align-items: center; }
+
+/* =========================================================
+   v16 Team: Level 3 / Level 2 member groups (design.md §6o)
+   Level 3 = solid badge, Level 2 = outlined badge; cards with no photo show initials
+   ========================================================= */
+.group-intro { color: var(--muted); margin: calc(-1 * var(--s2)) 0 var(--s3); font-size: 1.05rem; }
+.person .photo .lvl {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; line-height: 1.2;
+}
+.person .photo .lvl-3 { background: var(--blue); color: var(--paper); border: 1.5px solid var(--blue); }
+.person .photo .lvl-2 { background: var(--paper); color: var(--blue); border: 1.5px solid var(--blue); }
+.person .photo .initials {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: clamp(2.6rem, 6vw, 4rem); letter-spacing: .04em; color: var(--muted);
+  background: var(--paper-2);
+}
