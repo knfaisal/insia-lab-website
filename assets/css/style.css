@@ -896,4 +896,5 @@ html[data-accent="gold"] .hero-img.hero-v11 { background-image: url("../img/hero
 
 /* v17 Team cards: no role line (the section heading says it), no arrow;
    the "where they are now" line takes the accent colour the role line had */
-.person .person-now { color: var(--blue); font-weight: 600; margin-top: 6px; }
+.person .person-now { color: var(--blue); font-weight: 600; margin-top: 6px; line-height: 1.45; }
+/* each " · " part of a now line goes on its own line (main.js) */

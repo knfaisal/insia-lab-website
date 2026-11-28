@@ -214,7 +214,7 @@ window.INSIA = {
     ],
     groups: [
       { title: "Research Assistant", people: [
-        { name: "Sadman Rahman", note: "Research Assistant, Co-Founder · M.Sc. EEE (BUET) · B.Sc. EEE (MIST)",
+        { name: "Sadman Rahman", now: "Research Assistant, Co-Founder · M.Sc. EEE (BUET) · B.Sc. EEE (MIST)",
           photo: "assets/img/team/sadman-rahman.webp",
           links: ["https://www.linkedin.com/in/sadman-rahman-2412b0339/", "https://www.facebook.com/sadman.rahman.950583", "https://sdmrnwashere.github.io/", "https://scholar.google.com/citations?user=nHt79bkAAAAJ&hl=en"] },
       ]},
