@@ -16,6 +16,7 @@ window.INSIA = {
   bench: {
     updated: "Nov 2026",
     items: [
+      { text: "MIST research grant approved: privacy-preserving handheld fingerprint attendance system for MIST and higher-education institutions in Bangladesh" },
       { text: "IEEE/CAA Journal of Automatica Sinica paper on WVD-MODWT accepted (IF 19.2)" },
       { text: "MoST-funded project: smartphone-based distracted-walking detection with on-device AI" },
       { text: "High-resolution ECG time–frequency work heading to IEEE SPMB 2026" },
@@ -360,6 +361,7 @@ window.INSIA = {
 
   /* Achievements (Team page): newest first; `people` get the credit */
   D.achievements = [
+    { year: 2026, award: "Research Grant", where: "MIST Research Grant Committee: Development of a privacy-preserving handheld fingerprint-based automated attendance system for MIST and higher-education institutions of Bangladesh", people: "INSIA Lab" },
     { year: 2026, award: "Best Presentation Award", where: "IEEE QPAIN 2026, Chattogram", people: "N. M. A. Rasel, S. Rahman, K. N. Faisal" },
     { year: 2025, award: "Best Paper Award", where: "IEEE SPICSCON 2025, Rajshahi", people: "S. Rahman, I. Mohtasim, S. Farhan, K. N. Faisal" },
     { year: 2025, award: "Research Grant", where: "Ministry of Science and Technology, Bangladesh: smartphone-based distracted-walking detection", people: "K. N. Faisal (PI)" },

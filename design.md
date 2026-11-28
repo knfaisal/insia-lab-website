@@ -213,6 +213,7 @@ CNAME                                 www.insia-lab.com
 | 76 | | **Owner: still "Not secure".** Bare domain moved to A records; GitHub certificate for both names requested but stuck at `new` (DNS verified correct; domain reset once). Added a script redirect from http to https://www so no visitor lands on the insecure page meanwhile. `v=44`. |
 | 77 | | **Owner: add new members serially, chronological, Level 2 and 3 distinguishable.** Added 8 Level 3 + 8 Level 2 members as two Team sections with level badges (§6o), CSS v16, initials fallback for missing photos. Verified in browser, no broken images. `v=45`. |
 | 78 | | **Owner: no level titles, just separate rows; download Level 3 photos.** Merged Levels 4/3/2 into one Undergraduate section as three rows with a rule between, level badge on each card; added the 8 Level 3 photos from Drive. Verified, no broken images. `v=46`. |
+| 79 | | **Owner: news, MIST research grant approved** (privacy-preserving handheld fingerprint attendance system for MIST and higher-education institutions of Bangladesh). Added as the first *On the bench* item (home) and as a 2026 Research Grant in `achievements` (Team → Achievements, Research → Funding); credited to "INSIA Lab" until the PI/team is given. `v=47`. |
 
 ---
 
