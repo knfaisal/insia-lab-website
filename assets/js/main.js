@@ -260,8 +260,8 @@ if (location.protocol === "http:" && /(^|\.)insia-lab\.com$/.test(location.hostn
       // v16: `level` (MIST academic year) adds a small badge on the photo; no photo shows initials.
       const card = (p, i, level) => `<article class="person reveal" style="--i:${i % 4}">
             <div class="photo">${p.photo ? `<img src="${p.photo}" alt="${esc(p.name)}" loading="lazy">` : `<span class="initials" aria-hidden="true">${esc(initials(p.name))}</span>`}${level ? `<span class="lvl lvl-${level}">Level ${level}</span>` : ""}</div>
-            <div class="person-body"><h3>${esc(p.name)}</h3><span class="person-role">${esc(p.role || "")}</span>
-              ${p.now ? `<span class="person-now">→ ${esc(p.now)}</span>` : ""}
+            <div class="person-body"><h3>${esc(p.name)}</h3>
+              ${p.now ? `<span class="person-now">${esc(p.now)}</span>` : ""}
               ${p.note ? `<p>${esc(p.note)}</p>` : ""}</div>
             <div class="socials">${soc(p.links)}</div></article>`;
       const groups = D.team.groups.map(g => {
