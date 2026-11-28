@@ -287,6 +287,8 @@ window.INSIA = {
           links: ["https://www.linkedin.com/in/ayesha-islam-295377411", "https://scholar.google.com/citations?user=myNcgpkAAAAJ", "https://www.researchgate.net/profile/Ayesha-Islam-15"] },
         { name: "Jarin Subah Tanha", photo: "assets/img/team/jarin-subah-tanha.webp",
           links: ["https://www.linkedin.com/in/jarin-subah-tanha-94b472451", "https://scholar.google.com/citations?user=oUJTYeUAAAAJ", "https://www.researchgate.net/profile/Jarin-Tanha-2"] },
+        { name: "Maisha Tabassum", photo: "assets/img/team/maisha-tabassum.webp",
+          links: ["https://www.linkedin.com/in/maisha-tabassum-83272b417", "https://scholar.google.com/citations?user=YzXpMgkAAAAJ", "https://www.researchgate.net/profile/Maisha-Tabassum-6"] },
       ]},
       ]},
       { title: "Alumni", people: [

@@ -219,6 +219,7 @@ CNAME                                 www.insia-lab.com
 | 82 | | **Owner: no arrow, no role line.** Cards drop the "→" and the per-section role line; the `now` text uses the accent colour (CSS v17). |
 | 83 | | **Owner: line breaks; Sadman in accent colour.** Each " · " part of `now` renders on its own line; Sadman's description moved from `note` to `now`. |
 | 84 | | **Owner: remove Rishi Sir for now.** Dr. Rishi Raj Sharma's mentor entry in `team.mentors` (`data.js`) is commented out, not deleted; remove the comment markers to restore. His bio and photo stay in place. Cache v=53. |
+| 85 | | **Owner: add Maisha Tabassum, Level 2.** Added at the end of the Level 2 row (newest) with photo (720×900 WebP crop) and LinkedIn, Scholar, ResearchGate links. Cache v=54. |
 
 ---
 
