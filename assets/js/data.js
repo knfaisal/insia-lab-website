@@ -231,7 +231,10 @@ window.INSIA = {
         { name: "Pretom Das", photo: "assets/img/team/pretom-das.webp",
           links: ["https://pretomdas.vercel.app/", "https://scholar.google.com/citations?user=cOyG-1MAAAAJ&hl=en"] },
       ]},
-      { title: "Undergraduate Lab Members", people: [
+      /* Undergraduates in rows by MIST level (academic year): Level 4, then 3, then 2.
+         No sub-headings; each card carries a small level badge. Each row is in join order. */
+      { title: "Undergraduate Lab Members", rows: [
+      { level: 4, people: [
         { name: "Mehedi Omio", photo: "assets/img/team/mehedi-omio.webp",
           links: ["https://www.linkedin.com/in/mdmehedihasanbhuiyan/", "https://scholar.google.com/citations?hl=en&user=FedkYBAAAAAJ", "http://www.researchgate.net/profile/Md-Mehedi-Hasan-Bhuiyan-2", "https://www.facebook.com/mehediamio00"] },
         { name: "Mahdia Binte Maksud", photo: "assets/img/team/mahdia-binte-maksud.webp",
@@ -247,19 +250,25 @@ window.INSIA = {
         { name: "Sabbir Ahmed Khan", photo: "assets/img/team/sabbir-ahmed-khan.webp",
           links: ["http://www.linkedin.com/in/sabbir-ahmed-khan-78a379283", "https://www.researchgate.net/profile/Sabbir-Ahmed-Khan"] },
       ]},
-      /* Newer undergraduates by MIST level (academic year), listed in the order they joined.
-         Level 3 photos are still to come: a card with no `photo` shows initials. */
-      { title: "Level 3 Members", level: 3, intro: "Third-year undergraduates", people: [
-        { name: "Jannatul Naeum Taha", links: ["https://www.linkedin.com/in/jannatul-naeum-41b906337", "https://scholar.google.com/citations?user=DGIVuWcAAAAJ"] },
-        { name: "Tasmima Yasmin Puspita", links: ["https://www.linkedin.com/in/tasmima-yasmin-puspita-4026b5444", "https://www.researchgate.net/profile/Tasmima-Puspita"] },
-        { name: "Yeasin Nobi Muhi", links: ["https://www.linkedin.com/in/yeasin-nobi-muhi-a9579b44a", "https://www.researchgate.net/profile/Yeasin-Muhi"] },
-        { name: "Tasnia Islam Mitra", links: ["https://www.linkedin.com/in/tasnia-islam-mitra-b9753a248"] },
-        { name: "Syeda Iffat Jahan Tarin", links: ["https://www.linkedin.com/in/syeda-iffat-jahan-tarin-baa1a72bb", "https://www.researchgate.net/profile/Syeda-Tarin"] },
-        { name: "Samia Rahman", links: ["https://www.linkedin.com/in/samia-rahman-89aa5b33a", "https://scholar.google.com/citations?user=0THxLhMAAAAJ", "https://www.researchgate.net/profile/Samia-Rahman-30"] },
-        { name: "Md. Rafiul Islam Talukder", links: ["https://scholar.google.com/citations?user=xcKfK9sAAAAJ"] },
-        { name: "Tahiya Iffat Majumder", links: ["https://www.linkedin.com/in/tahiyamajumder", "https://scholar.google.com/citations?user=ku8NozUAAAAJ", "https://www.researchgate.net/profile/Tahiya-Majumder"] },
+      { level: 3, people: [
+        { name: "Jannatul Naeum Taha", photo: "assets/img/team/jannatul-naeum-taha.webp",
+          links: ["https://www.linkedin.com/in/jannatul-naeum-41b906337", "https://scholar.google.com/citations?user=DGIVuWcAAAAJ"] },
+        { name: "Tasmima Yasmin Puspita", photo: "assets/img/team/tasmima-yasmin-puspita.webp",
+          links: ["https://www.linkedin.com/in/tasmima-yasmin-puspita-4026b5444", "https://www.researchgate.net/profile/Tasmima-Puspita"] },
+        { name: "Yeasin Nobi Muhi", photo: "assets/img/team/yeasin-nobi-muhi.webp",
+          links: ["https://www.linkedin.com/in/yeasin-nobi-muhi-a9579b44a", "https://www.researchgate.net/profile/Yeasin-Muhi"] },
+        { name: "Tasnia Islam Mitra", photo: "assets/img/team/tasnia-islam-mitra.webp",
+          links: ["https://www.linkedin.com/in/tasnia-islam-mitra-b9753a248"] },
+        { name: "Syeda Iffat Jahan Tarin", photo: "assets/img/team/syeda-iffat-jahan-tarin.webp",
+          links: ["https://www.linkedin.com/in/syeda-iffat-jahan-tarin-baa1a72bb", "https://www.researchgate.net/profile/Syeda-Tarin"] },
+        { name: "Samia Rahman", photo: "assets/img/team/samia-rahman.webp",
+          links: ["https://www.linkedin.com/in/samia-rahman-89aa5b33a", "https://scholar.google.com/citations?user=0THxLhMAAAAJ", "https://www.researchgate.net/profile/Samia-Rahman-30"] },
+        { name: "Md. Rafiul Islam Talukder", photo: "assets/img/team/rafiul-islam-talukder.webp",
+          links: ["https://scholar.google.com/citations?user=xcKfK9sAAAAJ"] },
+        { name: "Tahiya Iffat Majumder", photo: "assets/img/team/tahiya-iffat-majumder.webp",
+          links: ["https://www.linkedin.com/in/tahiyamajumder", "https://scholar.google.com/citations?user=ku8NozUAAAAJ", "https://www.researchgate.net/profile/Tahiya-Majumder"] },
       ]},
-      { title: "Level 2 Members", level: 2, intro: "Second-year undergraduates", people: [
+      { level: 2, people: [
         { name: "Mayesha Muntaha Rahman", photo: "assets/img/team/mayesha-muntaha-rahman.webp",
           links: ["https://www.linkedin.com/in/mayesha-muntaha-rahman-688104310", "https://scholar.google.com/citations?user=msgm4IYAAAAJ", "https://www.researchgate.net/profile/Mayesha-Rahman-4"] },
         { name: "Rafid Mahmud Spandan", photo: "assets/img/team/rafid-mahmud-spandan.webp",
@@ -276,6 +285,7 @@ window.INSIA = {
           links: ["https://www.linkedin.com/in/ayesha-islam-295377411", "https://scholar.google.com/citations?user=myNcgpkAAAAJ", "https://www.researchgate.net/profile/Ayesha-Islam-15"] },
         { name: "Jarin Subah Tanha", photo: "assets/img/team/jarin-subah-tanha.webp",
           links: ["https://www.linkedin.com/in/jarin-subah-tanha-94b472451", "https://scholar.google.com/citations?user=oUJTYeUAAAAJ", "https://www.researchgate.net/profile/Jarin-Tanha-2"] },
+      ]},
       ]},
       { title: "Alumni", people: [
         { name: "Saiba Aabira", photo: "assets/img/team/saiba-aabira.webp",
@@ -344,9 +354,8 @@ window.INSIA = {
 
   /* Role line on each member card (blue, under the name) */
   const roles = { "Research Assistant": "Research Assistant", "Graduate Lab Members": "Graduate Researcher",
-                  "Undergraduate Lab Members": "Undergraduate Researcher", "Alumni": "Alumni",
-                  "Level 3 Members": "Undergraduate Researcher", "Level 2 Members": "Undergraduate Researcher" };
-  D.team.groups.forEach(g => g.people.forEach(p => { p.role = p.role || roles[g.title] || ""; }));
+                  "Undergraduate Lab Members": "Undergraduate Researcher", "Alumni": "Alumni" };
+  D.team.groups.forEach(g => (g.rows ? g.rows.flatMap(r => r.people) : g.people).forEach(p => { p.role = p.role || roles[g.title] || ""; }));
   /* Alumni: add `now: "PhD student @ …"` to a person in team.groups above to show where they went next. */
 
   /* Achievements (Team page): newest first; `people` get the credit */

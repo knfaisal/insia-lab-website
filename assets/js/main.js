@@ -254,21 +254,24 @@ if (location.protocol === "http:" && /(^|\.)insia-lab\.com$/.test(location.hostn
       let n = 1;   // numbered boxes: 01, 02, … (no § sign)
       const sec = (title, inner) => `<section class="team-group"><div class="sec-head reveal"><span class="num">${String(n++).padStart(2, "0")}</span><h2>${title}</h2></div>${inner}</section>`;
       const mentorsSec = sec("<em>Mentors</em>", mentors);
-      const groups = D.team.groups.map(g => {
-        const [a, ...rest] = g.title.split(" ");
-        // v8 uniform member card (idea from MMLab@NTU): photo, NAME, blue role line, optional
-        // "now @" line for alumni, and links in a separate footer strip so cards align
-        // v16: level groups (MIST academic year) get their own heading, an intro line and a badge on every card
-        const head = g.level ? `Level ${g.level} <em>Members</em>` : rest.length ? `${a} <em>${rest.join(" ")}</em>` : `<em>${a}</em>`;
-        const intro = g.intro ? `<p class="group-intro reveal">${esc(g.intro)} · in the order they joined</p>` : "";
-        const badge = g.level ? `<span class="lvl lvl-${g.level}">Level ${g.level}</span>` : "";
-        const initials = name => name.replace(/^(Md|Mohammad|Syeda?)\.?\s+/i, "").split(/\s+/).slice(0, 2).map(w => w[0]).join("");
-        return sec(head, `${intro}<div class="people${g.level ? ` people-lvl lvl-group-${g.level}` : ""}">${g.people.map((p, i) => `<article class="person reveal" style="--i:${i % 4}">
-            <div class="photo">${p.photo ? `<img src="${p.photo}" alt="${esc(p.name)}" loading="lazy">` : `<span class="initials" aria-hidden="true">${esc(initials(p.name))}</span>`}${badge}</div>
+      const initials = name => name.replace(/^(Md|Mohammad|Syeda?)\.?\s+/i, "").split(/\s+/).slice(0, 2).map(w => w[0]).join("");
+      // v8 uniform member card (idea from MMLab@NTU): photo, NAME, blue role line, optional
+      // "now @" line for alumni, and links in a separate footer strip so cards align.
+      // v16: `level` (MIST academic year) adds a small badge on the photo; no photo shows initials.
+      const card = (p, i, level) => `<article class="person reveal" style="--i:${i % 4}">
+            <div class="photo">${p.photo ? `<img src="${p.photo}" alt="${esc(p.name)}" loading="lazy">` : `<span class="initials" aria-hidden="true">${esc(initials(p.name))}</span>`}${level ? `<span class="lvl lvl-${level}">Level ${level}</span>` : ""}</div>
             <div class="person-body"><h3>${esc(p.name)}</h3><span class="person-role">${esc(p.role || "")}</span>
               ${p.now ? `<span class="person-now">→ ${esc(p.now)}</span>` : ""}
               ${p.note ? `<p>${esc(p.note)}</p>` : ""}</div>
-            <div class="socials">${soc(p.links)}</div></article>`).join("")}</div>`);
+            <div class="socials">${soc(p.links)}</div></article>`;
+      const groups = D.team.groups.map(g => {
+        const [a, ...rest] = g.title.split(" ");
+        const head = rest.length ? `${a} <em>${rest.join(" ")}</em>` : `<em>${a}</em>`;
+        // v16: a group with `rows` (undergraduates by level) shows each row on its own line, no sub-headings
+        const inner = g.rows
+          ? g.rows.map(r => `<div class="people people-row lvl-row-${r.level}">${r.people.map((p, i) => card(p, i, r.level)).join("")}</div>`).join("")
+          : `<div class="people">${g.people.map((p, i) => card(p, i)).join("")}</div>`;
+        return sec(head, inner);
       }).join("");
       // v8 Achievements (idea from MMLab@NTU): awards by year, crediting the people
       const ach = (D.achievements || []).length ? sec("<em>Achievements</em>", `<ol class="achievements">${D.achievements.map(a => `

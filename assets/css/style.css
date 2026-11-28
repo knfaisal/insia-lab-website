@@ -876,16 +876,17 @@ html[data-accent="gold"] .hero-img.hero-v11 { background-image: url("../img/hero
 .footer-bottom { flex-wrap: wrap; gap: var(--s2); align-items: center; }
 
 /* =========================================================
-   v16 Team: Level 3 / Level 2 member groups (design.md §6o)
-   Level 3 = solid badge, Level 2 = outlined badge; cards with no photo show initials
+   v16 Team: undergraduates in rows by level (design.md §6o)
+   Level 4 = solid badge, Level 3 = tinted, Level 2 = outlined; rows separated by a thin rule; no photo shows initials
    ========================================================= */
-.group-intro { color: var(--muted); margin: calc(-1 * var(--s2)) 0 var(--s3); font-size: 1.05rem; }
+.people-row + .people-row { margin-top: var(--s3); padding-top: var(--s3); border-top: 1px solid var(--rule); }
 .person .photo .lvl {
   position: absolute; top: 10px; left: 10px; z-index: 2;
   font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   padding: 4px 10px; border-radius: 999px; line-height: 1.2;
 }
-.person .photo .lvl-3 { background: var(--blue); color: var(--paper); border: 1.5px solid var(--blue); }
+.person .photo .lvl-4 { background: var(--blue); color: var(--paper); border: 1.5px solid var(--blue); }
+.person .photo .lvl-3 { background: color-mix(in srgb, var(--blue) 28%, var(--paper)); color: var(--ink); border: 1.5px solid var(--blue); }
 .person .photo .lvl-2 { background: var(--paper); color: var(--blue); border: 1.5px solid var(--blue); }
 .person .photo .initials {
   position: absolute; inset: 0; display: grid; place-items: center;
