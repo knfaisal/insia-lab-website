@@ -229,7 +229,7 @@ window.INSIA = {
           links: ["https://www.facebook.com/arnob.ghosh.16"] },
         { name: "Siam Rahman", photo: "assets/img/team/siam-rahman.webp",
           links: ["https://www.linkedin.com/in/siam-rahman-540527316/", "https://scholar.google.com/citations?user=DiUZBuoAAAAJ&hl=en"] },
-        { name: "Pretom Das", photo: "assets/img/team/pretom-das.webp",
+        { name: "Pretom Das", now: "M.Sc. (EEE) student @ BUET", photo: "assets/img/team/pretom-das.webp",
           links: ["https://pretomdas.vercel.app/", "https://scholar.google.com/citations?user=cOyG-1MAAAAJ&hl=en"] },
       ]},
       /* Undergraduates in rows by MIST level (academic year): Level 4, then 3, then 2.
