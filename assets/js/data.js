@@ -206,11 +206,12 @@ window.INSIA = {
         email: "newajfaisal@gmail.com", profile: "director",
         photo: "assets/img/team/kazi-newaj-faisal.webp",
         links: ["https://scholar.google.com/citations?user=WYuCPWcAAAAJ&hl=en", "https://www.linkedin.com/in/newajfaisal/", "https://www.researchgate.net/profile/Kazi-Newaj-Faisal", "https://orcid.org/0000-0003-0546-4536"] },
+      /* Hidden for now (owner request); remove the comment markers to restore.
       { name: "Dr. Rishi Raj Sharma", role: "Co-Principal Investigator",
         lines: ["Professor, Department of Electronics Engineering", "Defence Institute of Advanced Technology (DIAT), Pune, India"],
         email: "rsharma@diat.ac.in", profile: "https://www.sensigi.com/chief-researcher",
         photo: "assets/img/team/rishi-raj-sharma.webp",
-        links: ["https://scholar.google.com/citations?user=pcdcpHcAAAAJ&hl=en", "https://www.linkedin.com/in/rishi-raj-sharma-96b906a4/", "https://orcid.org/0000-0001-6835-003X"] },
+        links: ["https://scholar.google.com/citations?user=pcdcpHcAAAAJ&hl=en", "https://www.linkedin.com/in/rishi-raj-sharma-96b906a4/", "https://orcid.org/0000-0001-6835-003X"] }, */
     ],
     groups: [
       { title: "Research Assistant", people: [

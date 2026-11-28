@@ -214,6 +214,11 @@ CNAME                                 www.insia-lab.com
 | 77 | | **Owner: add new members serially, chronological, Level 2 and 3 distinguishable.** Added 8 Level 3 + 8 Level 2 members as two Team sections with level badges (§6o), CSS v16, initials fallback for missing photos. Verified in browser, no broken images. `v=45`. |
 | 78 | | **Owner: no level titles, just separate rows; download Level 3 photos.** Merged Levels 4/3/2 into one Undergraduate section as three rows with a rule between, level badge on each card; added the 8 Level 3 photos from Drive. Verified, no broken images. `v=46`. |
 | 79 | | **Owner: news, MIST research grant approved** (privacy-preserving handheld fingerprint attendance system for MIST and higher-education institutions of Bangladesh). Added as the first *On the bench* item (home) and as a 2026 Research Grant in `achievements` (Team → Achievements, Research → Funding); credited to K. N. Faisal (PI). `v=47`. |
+| 80 | | **Owner: find where graduates and alumni are now.** Searched without LinkedIn (ORCID, ResearchGate); little found, so the owner supplied the roles. |
+| 81 | | **Owner-supplied current roles** added as `now` for 4 graduates and 4 alumni. |
+| 82 | | **Owner: no arrow, no role line.** Cards drop the "→" and the per-section role line; the `now` text uses the accent colour (CSS v17). |
+| 83 | | **Owner: line breaks; Sadman in accent colour.** Each " · " part of `now` renders on its own line; Sadman's description moved from `note` to `now`. |
+| 84 | | **Owner: remove Rishi Sir for now.** Dr. Rishi Raj Sharma's mentor entry in `team.mentors` (`data.js`) is commented out, not deleted; remove the comment markers to restore. His bio and photo stay in place. Cache v=53. |
 
 ---
 
