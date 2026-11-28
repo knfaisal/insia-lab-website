@@ -361,7 +361,7 @@ window.INSIA = {
 
   /* Achievements (Team page): newest first; `people` get the credit */
   D.achievements = [
-    { year: 2026, award: "Research Grant", where: "MIST Research Grant Committee: Development of a privacy-preserving handheld fingerprint-based automated attendance system for MIST and higher-education institutions of Bangladesh", people: "INSIA Lab" },
+    { year: 2026, award: "Research Grant", where: "MIST Research Grant Committee: Development of a privacy-preserving handheld fingerprint-based automated attendance system for MIST and higher-education institutions of Bangladesh", people: "K. N. Faisal (PI)" },
     { year: 2026, award: "Best Presentation Award", where: "IEEE QPAIN 2026, Chattogram", people: "N. M. A. Rasel, S. Rahman, K. N. Faisal" },
     { year: 2025, award: "Best Paper Award", where: "IEEE SPICSCON 2025, Rajshahi", people: "S. Rahman, I. Mohtasim, S. Farhan, K. N. Faisal" },
     { year: 2025, award: "Research Grant", where: "Ministry of Science and Technology, Bangladesh: smartphone-based distracted-walking detection", people: "K. N. Faisal (PI)" },
